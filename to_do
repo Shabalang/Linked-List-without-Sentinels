@@ -1,0 +1,2 @@
+get_top and __iter__ are returning nodes instead of values, Insted get returned whats inserted.
+add __repr__
