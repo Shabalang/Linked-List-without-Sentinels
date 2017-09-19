@@ -1,0 +1,54 @@
+from double_linked_list import DoubleLinkedList as linked_list
+
+
+def main():
+    print("----------------------")
+    print("Test Add")
+    my_list = linked_list()
+    my_list.list_add(1)
+    my_list.list_add(2)
+    my_list.list_add(3)
+    my_list.list_add(4)
+    my_list.list_add(-200000)
+    my_list.list_add('a')
+    my_list.list_add(50000000)
+    my_list.list_add(50)
+
+    for i in my_list:
+        print(i.data)
+
+    print("----------------------")
+    print("Test Delete")
+
+
+    test_delete = my_list.list_delete(50000000)
+    if test_delete:
+        print("success")
+    else:
+        print("fail")
+
+    test_delete = my_list.list_delete(50)
+    if test_delete:
+        print("success")
+    else:
+        print("fail")
+
+    test_delete = my_list.list_delete('a')
+    if test_delete:
+        print("success")
+    else:
+        print("fail")
+
+
+    print("%%%%%%%%%%%%%%%%%%%%")
+
+    for i in my_list:
+        print(i.data)
+
+    print("----------------------")
+    print("Test Top get method")
+    print(my_list.get_top().data)
+
+
+if __name__ == "__main__":
+    main()
