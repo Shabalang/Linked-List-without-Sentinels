@@ -22,18 +22,19 @@ class DoubleLinkedList:
         # make prev pointer of new node, point to head
         node.prev = self.head
 
-    def list_search(self, value):
+     def list_search(self, value):
         # start from the head
         p = self.head
         # do it as long as there is no pointer and value not foun
         while p is not None:
             # make p reference to next node
-            if p.next is not None:
+            if p.data is not None:
                 if p.data == value:
                     return p
+            if p.next is not None:
                 p = p.next
             else:
-                 return 0
+                return False
 
     def list_delete(self, value):
         # find the node in the linked list
